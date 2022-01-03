@@ -148,7 +148,7 @@ git pull
 ./emsdk activate 2.0.7
 source ./emsdk_env.sh
 ```
-> **Note**: It is strongly suggested to maintain the same Emscripten version for both libraries and filter building. At the moment of writing, the WASM Filter building process relies on \textbf{Emscripten v 2.07}. Stick with this version or be aware that runtime errors may arise.
+> **Note**: It is strongly suggested to maintain the same Emscripten version for both libraries and filter building. At the moment of writing, the WASM Filter building process relies on **Emscripten v. 2.07**. Stick with this version or be aware that runtime errors may arise.
 
 2. Download and install the WASI SDK:
 ```
