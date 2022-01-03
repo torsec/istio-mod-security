@@ -1,4 +1,8 @@
 
 *.a
 
+log.txt
+
 basemodsec/.vscode/
+
+old-not-tracked/

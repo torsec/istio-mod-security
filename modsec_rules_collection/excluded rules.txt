@@ -1,3 +1,31 @@
+Excluded CRS Rules
+
+list of the CRS IDs of the rules excluded in the current WAF implementation:
+
+- 910100: Detection of client IP from a high risk country, GeoIP library is needed.
+- 913100: Detection of User-Agent associated with security scanner, access to scanners-user-agents.data is required.
+- 913110: Detection of headers associated with security scanner, access to scanners-headers.data is required.
+- 913120: Detection of filename/argument associated with security scanner, access to scanners-urls.data is required.
+- 913101: Detection of User-Agent associated with scripts, access to scripting-user-agents.data is required.
+- 913101: Detection of User-Agent associated with crawlers, access to crawlers-user-agents.data is required.
+- 930130: Detection of access attempt to restricted files, access to restricted-files.data is required.
+- 932120: Detection of Windows Poweshell commands, access to windows-powershell-commands.data is required.
+- 932160: Detection of Unix shell commands, access to unix-shell.data is required.
+- 932180: Detection of restricted file upload attempt, access to restricted-upload.data is required.
+- 933120: Detection of PHP configuration directives, access to php-config-directives.data is required.
+- 933130: Detection of PHP variables , access to php-variables.data is required.
+- 933150: Detection of high-risk PHP functions, access to php-function-names-933150.data  is required.
+- 933151: Detection of medium-risk PHP functions, access to php-function-names-933151.data  is required.
+- 944130: Detection of suspicious Java class, access to java-classes.data  is required.
+- 951100: Detection of SQL errors in response body, access to sql-errors.data  is required.
+- 952100: Detection of Java source code leakages, access to java-code-leakages.data  is required.
+- 952110: Detection of Java errors, access to java-errors.data  is required.
+- 930120: Detection of OS file accesses attempt, access to lfi-os-files.data  is required.
+
+---------- Raw List ---------- 
+
+
+
 Rules error. File: <<reference missing or not informed>>. Line: 2291. Column: 22. This version of ModSecurity was not compiled with GeoIP or MaxMind support.
 
 SecRule TX:HIGH_RISK_COUNTRY_CODES "!@rx ^$" \
@@ -447,23 +475,3 @@ SecRule REQUEST_COOKIES|!REQUEST_COOKIES:/__utm/|REQUEST_COOKIES_NAMES|ARGS_NAME
 
 
 
-
-
-
-
-Anomaly level che si alzano troppo.
-
-Solo la get: non ha l'host, ma comunque passa
-
- * Match, but no disruptive action: ModSecurity: Warning. Matched "Operator `Eq' with parameter `0' against variable `REQUEST_HEADERS:Host' (Value: `0' ) [file "<<reference missing or not informed>>"] [line "2948"] [id "920280"] [rev ""] [msg "Request Missing a Host Header"] [data ""] [severity "4"] [ver "OWASP_CRS/3.3.2"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "10.42.0.130"] [uri "/productpage"] [unique_id "1633003341"] [ref ""]
-
-
-
-la post viene bloccata: è solo lo score che diventa troppo alto. 
-siamo dietro ad un proxy. pacchetto che non rispetta il formato
-modulare lo score
-rimuovere regola
-
-
-ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Ge' with parameter `5' against variable `TX:ANOMALY_SCORE' (Value: `9' ) [file "<<reference missing or not informed>>"] [line "6832"] [id "949110"] [rev ""] [msg "Inbound Anomaly Score Exceeded (Total Score: 9)"] [data ""] [severity "2"] [ver "OWASP_CRS/3.3.2"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-generic"] [hostname "10.42.0.130"] [uri "/login"] [unique_id "1633003414"] [ref ""]intervention.status = 403
-Intervention, returning code: 403
