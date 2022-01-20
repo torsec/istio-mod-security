@@ -323,3 +323,10 @@ The `sendLocalResponse` function, defined inside the C++ SDK, permits to send a 
 ## Current Limitations
 * Modsecurity has been built with minimal dependencies. Optional libraries, and relative features, are therefore not available.
 * The ABI [currently does not support](https://github.com/proxy-wasm/proxy-wasm-cpp-host/issues/127) access to the file system. All the CRS rules relying on `.data` files, are currenty excluded. [This file](/basemodsec/modsec_rules_collection/excluded%20rules.txt) shows the complete list of the currently excluded rules.
+
+## References and documentation
+[Documentation](https://webthesis.biblio.polito.it/21170/1/tesi.pdf)
+
+## Authors and contacts
+* Matteo Pace
+* Ignazio Pedone ignazio.pedone@polito.it
