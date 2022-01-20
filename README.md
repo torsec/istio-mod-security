@@ -325,7 +325,7 @@ The `sendLocalResponse` function, defined inside the C++ SDK, permits to send a 
 * The ABI [currently does not support](https://github.com/proxy-wasm/proxy-wasm-cpp-host/issues/127) access to the file system. All the CRS rules relying on `.data` files, are currenty excluded. [This file](/basemodsec/modsec_rules_collection/excluded%20rules.txt) shows the complete list of the currently excluded rules.
 
 ## References and documentation
-[Documentation](https://webthesis.biblio.polito.it/21170/1/tesi.pdf)
+Here a link to the full [documentation](https://webthesis.biblio.polito.it/21170/1/tesi.pdf) about the project.
 
 ## Authors and contacts
 * Matteo Pace
