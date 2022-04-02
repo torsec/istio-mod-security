@@ -329,4 +329,4 @@ Here a link to the full [documentation](https://webthesis.biblio.polito.it/21170
 
 ## Authors and contacts
 * Matteo Pace
-* Ignazio Pedone ignazio.pedone@polito.it
+* Ignazio Pedone ignazio.pedone@gmail.com
